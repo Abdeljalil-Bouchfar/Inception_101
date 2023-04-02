@@ -1,0 +1,7 @@
+DOMAIN_NAME=abouchfa.42.fr
+
+DATABASE_NAME=Database
+USER=abouchfa
+USER_PASS=user_pass
+USER_EMAIL=abouchfa@gmail.com
+ROOT_PASS=root_pass
