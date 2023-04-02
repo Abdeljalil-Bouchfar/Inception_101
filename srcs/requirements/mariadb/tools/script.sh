@@ -20,6 +20,6 @@ mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$ROOT_PASS' ;"
 mysql -e "FLUSH PRIVILEGES;"
 
 # Restart the MySQL service
-# kill $(cat /var/run/mysqld/mysqld.pid)
+kill $(cat /var/run/mysqld/mysqld.pid)
 # # service mysql start
-# mysqld
+mysqld

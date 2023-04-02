@@ -11,4 +11,4 @@ RUN sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mariadb.conf.
 # Copy the script to create the database and the user into the container
 COPY tools/script.sh /script.sh
 
-CMD ["bash", "script.sh"]
+ENTRYPOINT ["bash", "script.sh"]
