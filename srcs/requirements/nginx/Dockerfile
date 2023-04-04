@@ -1,10 +1,10 @@
-# Use Alpine Linux distribution as a base image
-FROM alpine:3.16
+# Use debian:buster Linux distribution as a base image
+FROM debian:buster
 
-# Update apk && upgrade existing packages
+# Update apt && upgrade existing packages && install mariadb
 # install nginx and openssl
-RUN	apk update && apk upgrade && \
-	apk add --no-cache nginx openssl
+RUN	apt-get update && apt-get upgrade -y && \
+	apt-get install -y nginx openssl
 
 # Generate a self-signed certificate and a key
 RUN openssl req -newkey rsa:4096 -days 365 -nodes -x509 \
@@ -16,4 +16,4 @@ RUN openssl req -newkey rsa:4096 -days 365 -nodes -x509 \
 COPY conf/nginx.conf /etc/nginx/nginx.conf
 
 # Statrt nginx server
-CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["nginx", "-g", "daemon off;"]

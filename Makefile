@@ -1,20 +1,19 @@
 all:
 	@mkdir -p /home/abouchfa/data/mariadb
 	@mkdir -p /home/abouchfa/data/wordpress
-	@docker compose -f srcs/docker-compose.yml up -d --build
+	@docker-compose -f srcs/docker-compose.yml up -d --build
 
 down:
-	@docker compose -f srcs/docker-compose.yml down
+	@docker-compose -f srcs/docker-compose.yml down
 
-re: clean
-	@docker compose -f srcs/docker-compose.yml up -d --build
+re: clean all
 
-clean:
-	@docker stop $$(docker ps -qa);\
-	docker rm $$(docker ps -qa);\
-	docker rmi -f $$(docker images -qa);\
-	docker volume rm $$(docker volume ls -q);\
-	docker network rm $$(docker network ls -q);\
+clean: down
+	@docker volume rm -f srcs_mariadb
+	@docker volume rm -f srcs_wordpress
+	@docker system prune -af
+	sudo rm -rf /home/abouchfa/data/mariadb
+	sudo rm -rf /home/abouchfa/data/wordpress
 
 ls_ps:
 	docker ps -a
