@@ -12,7 +12,7 @@ services:
       context: requirements/mariadb
       dockerfile: Dockerfile
     env_file: .env
-    restart: on-failure
+    restart: always
     expose:
       - "3306"
 
@@ -31,7 +31,7 @@ services:
     env_file: .env
     ports:
       - "443:443"
-    restart: on-failure
+    restart: always
 
   wordpress:
     image: wordpress
@@ -46,7 +46,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - mariadb
-    restart: on-failure
+    restart: always
     expose: 
       - "9000"
 
