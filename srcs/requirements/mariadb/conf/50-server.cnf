@@ -2,6 +2,7 @@
 user = root
 port = 3306
 datadir = /var/lib/mysql
-socket = /var/run/mysqld/mysqld.sock
+socket = /run/mysqld/mysqld.sock
 skip-networking = false
+require_password_reuse = 1
 bind-address = 0.0.0.0

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # starts the MySQL service
 service mysql start 
@@ -10,14 +10,10 @@ mysql -e "CREATE DATABASE IF NOT EXISTS $DATABASE_NAME ;"
 mysql -e "CREATE USER IF NOT EXISTS '$USER'@'%' IDENTIFIED BY '$PASS' ;"
 
 # grant all privileges to the user on the database.
-mysql -e "GRANT ALL PRIVILEGES ON $DATABASE_NAME.* TO '$USER'@'%' IDENTIFIED BY '$PASS' ;"
+mysql -e "GRANT ALL PRIVILEGES ON $DATABASE_NAME.* TO '$USER'@'%';"
 
 # change the password of the root user to the value specified in the environment variable.
-mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$ROOT_PASS' ;"
-
-# ensures that any changes made to the user accounts or their privileges
-# are immediately available without requiring a server restart.
-mysql -e "FLUSH PRIVILEGES;"
+mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$PASS' ;"
 
 # Restart the MySQL service
 kill $(cat /var/run/mysqld/mysqld.pid)
