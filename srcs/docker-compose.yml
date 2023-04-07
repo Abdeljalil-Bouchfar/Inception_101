@@ -38,7 +38,7 @@ services:
     container_name: wordpress
     env_file: .env
     volumes:
-    - wordpress:/var/www/wordpress
+      - wordpress:/var/www/wordpress
     networks:
       - inception
     build: 
@@ -66,4 +66,3 @@ volumes:
 
 networks:
     inception:
-      driver: bridge
