@@ -19,7 +19,7 @@ ls_ps:
 	docker ps -a
 
 ls_images:
-	docker images a
+	docker images
 
 ls_all: ls_ps ls_images
 

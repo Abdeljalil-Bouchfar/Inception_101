@@ -14,6 +14,4 @@ COPY conf/www.conf /etc/php/7.3/fpm/pool.d
 # Copy the script to setup wordpess
 COPY tools/script.sh /script.sh
 
-EXPOSE 9000
-
 ENTRYPOINT ["bash", "script.sh"]
