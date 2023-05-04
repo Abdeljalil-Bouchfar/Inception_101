@@ -48,15 +48,15 @@ Cgroups are used to limit the amount of resources that a container can use, such
 
 Finally, Docker uses a union file system to create a layered file system for the container. The file system of the container is built on top of a base image, and additional layers can be added to the file system as needed. This allows containers to share the same base image, but still have their own unique file system.
 
-[you need to learn Docker RIGHT NOW!! // Docker Containers 101](https://youtu.be/eGz9DS-aIeY)
+[📷 you need to learn Docker RIGHT NOW!! // Docker Containers 101](https://youtu.be/eGz9DS-aIeY)
 
-[What Are Namespaces and cgroups, and How Do They Work? - NGINX](https://www.nginx.com/blog/what-are-namespaces-cgroups-how-do-they-work/)
+[📝 What Are Namespaces and cgroups, and How Do They Work?](https://www.nginx.com/blog/what-are-namespaces-cgroups-how-do-they-work/)
 
-[Cgroups, namespaces, and beyond: what are containers made from?](https://youtu.be/sK5i-N34im8)
+[📷 Cgroups, namespaces, and beyond: what are containers made from?](https://youtu.be/sK5i-N34im8)
 
-[UnionFS : A File System of a Container](https://medium.com/@knoldus/unionfs-a-file-system-of-a-container-2136cd11a779)
+[📝 UnionFS : A File System of a Container](https://medium.com/@knoldus/unionfs-a-file-system-of-a-container-2136cd11a779)
 
-[Containers from scratch: The sequel - Liz Rice (Aqua Security)](https://youtu.be/_TsSmSu57Zo)
+[📷 Containers from scratch: The sequel - Liz Rice (Aqua Security)](https://youtu.be/_TsSmSu57Zo)
 
 ## Docker network
 
@@ -77,7 +77,7 @@ Docker also provides a number of network drivers that allow for more advanced ne
     - **`docker network rm`**: Removes a specified Docker network
     - **`docker network prune`**: Removes all unused Docker networks.
 
-[Docker networking is CRAZY!! (you NEED to learn it)](https://youtu.be/bKFMS5C4CG0)
+[📷 Docker networking is CRAZY!! (you NEED to learn it)](https://youtu.be/bKFMS5C4CG0)
 
 ## Docker volume
 
@@ -89,7 +89,7 @@ Docker provides several options for creating and managing volumes. Volumes can b
 
 Docker volumes are often preferred over bind mounts, which mount a host file or directory into a container, because volumes provide better data management, better performance, and greater portability across different host systems.
 
-[Understanding Docker Volumes with an example](https://medium.com/bb-tutorials-and-thoughts/understanding-docker-volumes-with-an-example-d898cb5e40d7)
+[📝 Understanding Docker Volumes with an example](https://medium.com/bb-tutorials-and-thoughts/understanding-docker-volumes-with-an-example-d898cb5e40d7)
 
 ## What is Docker-compose and How it works?
 
@@ -113,7 +113,7 @@ When you run **`docker-compose up`**, Docker Compose reads the **`docker-compose
     - **`docker-compose run`**: Start a new container and run a command inside it.
     - **`docker-compose config`**: Validate and view the **`docker-compose.yml`** file.
 
-[Docker Compose will BLOW your MIND!! (a tutorial)](https://youtu.be/DM65_JyGxCo)
+[📷 Docker Compose will BLOW your MIND!! (a tutorial)](https://youtu.be/DM65_JyGxCo)
 
 ## The difference between a Docker image used with docker compose and without docker-compose?
 
