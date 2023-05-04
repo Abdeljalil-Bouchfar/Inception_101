@@ -1,5 +1,15 @@
 # Inception_101
 
+* [Intro](https://github.com/Abdeljalil-Bouchfar/Inception_101#Intro)
+* [What is Docker and How it works?](https://github.com/Abdeljalil-Bouchfar/Inception_101#what-is-docker-and-how-it-works)
+* [Docker network](https://github.com/Abdeljalil-Bouchfar/Inception_101#Docker-network)
+* [Docker volume](https://github.com/Abdeljalil-Bouchfar/Inception_101#docker-volume)
+* [What is Docker-compose and How it works?](https://github.com/Abdeljalil-Bouchfar/Inception_101#what-is-docker-compose-and-how-it-works)
+* [The difference between a Docker image used with docker compose and without docker-compose?](https://github.com/Abdeljalil-Bouchfar/Inception_101#the-difference-between-a-docker-image-used-with-docker-compose-and-without-docker-compose)
+* [What is the benefit of Docker compared to VMs?](https://github.com/Abdeljalil-Bouchfar/Inception_101#what-is-the-benefit-of-docker-compared-to-vms)
+
+## Intro
+
 In the bad old days, businesses had to purchase a brand-new server every time they wanted a new application. Then VMs came along and revolutionized IT by allowing departments to get more value out of both new and existing IT assets. Despite its success, the VM model isn't perfect.
 
 Following VMware's success, a newer, more efficient, and lightweight virtualization technology called $\color{red}{containers}$ emerged. Initially, containers were challenging to implement and only utilized by web giants with Linux kernel engineers on staff. Docker Inc. changed all of that by democratizing container virtualization technologies, making them accessible to the masses.
