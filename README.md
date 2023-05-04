@@ -40,7 +40,7 @@ Docker is a containerization platform that allows developers to package, distrib
     - **`docker rm`**: Removes a stopped container from your system.
     - **`docker rmi`**: Rremoves an image from your system.
 
-Docker works by leveraging a few core components of the Linux operating system: namespaces, cgroups, and the union file system.
+$\color{green}{Docker}$ $\color{green}{works}$ $\color{green}{by}$  leveraging a few core components of the Linux operating system: namespaces, cgroups, and the union file system.
 
 When a Docker container is started, a new namespace is created for the container process. This namespace is isolated from the host operating system and other containers, and it includes its own process table, network interfaces, and file system. The container process is started in this namespace, and it is restricted to only the resources that have been allocated to the container.
 
